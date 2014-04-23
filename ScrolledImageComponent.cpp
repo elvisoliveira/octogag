@@ -1,6 +1,6 @@
 #include "ScrolledImageComponent.h"
 
-ScrolledImageComponent::ScrolledImageComponent(wxWindow * parent, wxWindowID id, wxString imagepath) : wxScrolledWindow(parent, id, wxPoint(0, 0), wxSize(400,180))
+ScrolledImageComponent::ScrolledImageComponent(wxWindow * parent, wxWindowID id, wxString imagepath) : wxScrolledWindow(parent, id, wxDefaultPosition, wxSize(500,280))
 {
     // define image path as an object
     wxImage image(imagepath);
