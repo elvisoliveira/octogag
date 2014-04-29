@@ -36,7 +36,6 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 # Object Files
 OBJECTFILES= \
 	${OBJECTDIR}/_ext/1406160321/OctoFrame.o \
-	${OBJECTDIR}/_ext/1406160321/ScrolledImageComponent.o \
 	${OBJECTDIR}/main.o
 
 
@@ -68,11 +67,6 @@ ${OBJECTDIR}/_ext/1406160321/OctoFrame.o: /C/Users/elvis.nunes/Documents/Persona
 	${MKDIR} -p ${OBJECTDIR}/_ext/1406160321
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -I/C/Development/wxWidgets-2.9.5/lib/gcc_lib/mswu -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/1406160321/OctoFrame.o /C/Users/elvis.nunes/Documents/PersonalFiles/octogag/OctoFrame.cpp
-
-${OBJECTDIR}/_ext/1406160321/ScrolledImageComponent.o: /C/Users/elvis.nunes/Documents/PersonalFiles/octogag/ScrolledImageComponent.cpp 
-	${MKDIR} -p ${OBJECTDIR}/_ext/1406160321
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -I/C/Development/wxWidgets-2.9.5/lib/gcc_lib/mswu -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/1406160321/ScrolledImageComponent.o /C/Users/elvis.nunes/Documents/PersonalFiles/octogag/ScrolledImageComponent.cpp
 
 ${OBJECTDIR}/main.o: main.cpp 
 	${MKDIR} -p ${OBJECTDIR}

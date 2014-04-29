@@ -5,13 +5,11 @@
                    displayName="Arquivos de Cabeçalho"
                    projectFiles="true">
       <itemPath>C:/Users/elvis.nunes/Documents/PersonalFiles/octogag/OctoFrame.h</itemPath>
-      <itemPath>C:/Users/elvis.nunes/Documents/PersonalFiles/octogag/ScrolledImageComponent.h</itemPath>
     </logicalFolder>
     <logicalFolder name="SourceFiles"
                    displayName="Arquivos de Código-Fonte"
                    projectFiles="true">
       <itemPath>C:/Users/elvis.nunes/Documents/PersonalFiles/octogag/OctoFrame.cpp</itemPath>
-      <itemPath>C:/Users/elvis.nunes/Documents/PersonalFiles/octogag/ScrolledImageComponent.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
@@ -70,16 +68,6 @@
             tool="3"
             flavor2="0">
       </item>
-      <item path="C:/Users/elvis.nunes/Documents/PersonalFiles/octogag/ScrolledImageComponent.cpp"
-            ex="false"
-            tool="1"
-            flavor2="0">
-      </item>
-      <item path="C:/Users/elvis.nunes/Documents/PersonalFiles/octogag/ScrolledImageComponent.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
       <item path="C:/Users/elvis.nunes/Documents/PersonalFiles/octogag/tech.jpg"
             ex="false"
             tool="3"
@@ -129,16 +117,6 @@
             flavor2="0">
       </item>
       <item path="C:/Users/elvis.nunes/Documents/PersonalFiles/octogag/README.md"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="C:/Users/elvis.nunes/Documents/PersonalFiles/octogag/ScrolledImageComponent.cpp"
-            ex="false"
-            tool="1"
-            flavor2="0">
-      </item>
-      <item path="C:/Users/elvis.nunes/Documents/PersonalFiles/octogag/ScrolledImageComponent.h"
             ex="false"
             tool="3"
             flavor2="0">

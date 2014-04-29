@@ -26,12 +26,12 @@ protected:
     wxStatusBar* m_statusBar1;
     wxPanel* m_panel2;
     wxScrolledWindow* m_scrolledWindow1;
-    wxStaticBitmap* m_bitmap1;
+    wxStaticBitmap* m_bitmap2;
     wxStaticLine* m_staticline1;
     wxButton* m_button2;
     wxButton* m_button3;
 public:
-    OctoFrame(wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = wxT("OctoGAG"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize(500, 300), long style = wxCAPTION | wxCLOSE_BOX | wxMINIMIZE_BOX | wxSYSTEM_MENU | wxTAB_TRAVERSAL);
+    OctoFrame(wxWindow * parent, wxWindowID id = wxID_ANY, const wxString& title = wxT("OctoGAG"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize(500, 300), long style = wxCAPTION | wxCLOSE_BOX | wxMINIMIZE_BOX | wxSYSTEM_MENU | wxTAB_TRAVERSAL);
     ~OctoFrame();
 };
 
