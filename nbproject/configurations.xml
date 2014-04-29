@@ -4,11 +4,13 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Arquivos de Cabeçalho"
                    projectFiles="true">
+      <itemPath>C:/Users/elvis.nunes/Documents/PersonalFiles/octogag/OctoFrame.h</itemPath>
       <itemPath>C:/Users/elvis.nunes/Documents/PersonalFiles/octogag/ScrolledImageComponent.h</itemPath>
     </logicalFolder>
     <logicalFolder name="SourceFiles"
                    displayName="Arquivos de Código-Fonte"
                    projectFiles="true">
+      <itemPath>C:/Users/elvis.nunes/Documents/PersonalFiles/octogag/OctoFrame.cpp</itemPath>
       <itemPath>C:/Users/elvis.nunes/Documents/PersonalFiles/octogag/ScrolledImageComponent.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
@@ -53,6 +55,16 @@
           <commandLine>--mthreads --lwxmsw29u --lwxtiff --lwxjpeg --lwxpng --lwxzlib --lwxregexu --lwxexpat --lkernel32 --luser32 --lwxregexu --lgdi32 --lcomdlg32 --lwinspool --lwinmm --lshell32 --lcomctl32 --lole32 --loleaut32 --luuid --lrpcrt4 --ladvapi32 --lwsock32</commandLine>
         </linkerTool>
       </compileType>
+      <item path="C:/Users/elvis.nunes/Documents/PersonalFiles/octogag/OctoFrame.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="C:/Users/elvis.nunes/Documents/PersonalFiles/octogag/OctoFrame.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
       <item path="C:/Users/elvis.nunes/Documents/PersonalFiles/octogag/README.md"
             ex="false"
             tool="3"
@@ -106,6 +118,16 @@
           <commandLine>-mthreads -lwxmsw29u -lwxtiff -lwxjpeg -lwxpng -lwxzlib -lwxregexu -lwxexpat -lkernel32 -luser32 -lwxregexu -lgdi32 -lcomdlg32 -lwinspool -lwinmm -lshell32 -lcomctl32 -lole32 -loleaut32 -luuid -lrpcrt4 -ladvapi32 -lwsock32</commandLine>
         </linkerTool>
       </compileType>
+      <item path="C:/Users/elvis.nunes/Documents/PersonalFiles/octogag/OctoFrame.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="C:/Users/elvis.nunes/Documents/PersonalFiles/octogag/OctoFrame.h"
+            ex="false"
+            tool="3"
+            flavor2="0">
+      </item>
       <item path="C:/Users/elvis.nunes/Documents/PersonalFiles/octogag/README.md"
             ex="false"
             tool="3"
