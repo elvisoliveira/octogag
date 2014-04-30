@@ -6,11 +6,9 @@ public:
 
     bool OnInit() {
 
-        OctoFrame * dialog = new OctoFrame((wxWindow *) NULL);
-
-        dialog->Show();
-
-        this->SetTopWindow(dialog);
+                OctoFrame * dialog = new OctoFrame((wxWindow *) NULL);
+                dialog->Show();
+                this->SetTopWindow(dialog);
 
         // init image headlers
         //  wxInitAllImageHandlers();
