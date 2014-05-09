@@ -35,6 +35,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
+	${OBJECTDIR}/_ext/1406160321/Controller.o \
 	${OBJECTDIR}/_ext/1406160321/OctoFrame.o \
 	${OBJECTDIR}/main.o
 
@@ -62,6 +63,11 @@ LDLIBSOPTIONS=-L/C/Development/wxWidgets-2.9.5/lib/gcc_lib
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/octogag.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/octogag ${OBJECTFILES} ${LDLIBSOPTIONS} -mthreads -lwxmsw29u -lwxtiff -lwxjpeg -lwxpng -lwxzlib -lwxregexu -lwxexpat -lkernel32 -luser32 -lwxregexu -lgdi32 -lcomdlg32 -lwinspool -lwinmm -lshell32 -lcomctl32 -lole32 -loleaut32 -luuid -lrpcrt4 -ladvapi32 -lwsock32
+
+${OBJECTDIR}/_ext/1406160321/Controller.o: /C/Users/elvis.nunes/Documents/PersonalFiles/octogag/Controller.cpp 
+	${MKDIR} -p ${OBJECTDIR}/_ext/1406160321
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -I/C/Development/wxWidgets-2.9.5/lib/gcc_lib/mswu -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/1406160321/Controller.o /C/Users/elvis.nunes/Documents/PersonalFiles/octogag/Controller.cpp
 
 ${OBJECTDIR}/_ext/1406160321/OctoFrame.o: /C/Users/elvis.nunes/Documents/PersonalFiles/octogag/OctoFrame.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/1406160321

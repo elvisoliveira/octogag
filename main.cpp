@@ -12,9 +12,6 @@ public:
         // set the dialog as top window
         this->SetTopWindow(dialog);
 
-        
-        
-        
         return true;
     }
 };
