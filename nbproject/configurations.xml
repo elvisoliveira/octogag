@@ -102,6 +102,9 @@
           <developmentMode>5</developmentMode>
           <incDir>
             <pElem>C:/Development/wxWidgets-2.9.5/lib/gcc_lib/mswu</pElem>
+            <pElem>C:/Users/elvis.nunes/Documents/PersonalFiles/octonine</pElem>
+            <pElem>C:/Development/curl-7.36.0/include</pElem>
+            <pElem>C:/Development/rapidxml</pElem>
           </incDir>
           <commandLine>`wx-config --cxxflags`</commandLine>
         </ccTool>
@@ -112,9 +115,17 @@
           <developmentMode>5</developmentMode>
         </asmTool>
         <linkerTool>
+          <output>${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/octogag</output>
           <linkerAddLib>
             <pElem>C:/Development/wxWidgets-2.9.5/lib/gcc_lib</pElem>
+            <pElem>C:/Development/curl-7.36.0/lib</pElem>
+            <pElem>C:/Users/elvis.nunes/Documents/PersonalFiles/octonine</pElem>
           </linkerAddLib>
+          <linkerLibItems>
+            <linkerLibLibItem>curl</linkerLibLibItem>
+            <linkerLibLibItem>curl</linkerLibLibItem>
+            <linkerLibLibItem>curldll</linkerLibLibItem>
+          </linkerLibItems>
           <commandLine>-mthreads -lwxmsw29u -lwxtiff -lwxjpeg -lwxpng -lwxzlib -lwxregexu -lwxexpat -lkernel32 -luser32 -lwxregexu -lgdi32 -lcomdlg32 -lwinspool -lwinmm -lshell32 -lcomctl32 -lole32 -loleaut32 -luuid -lrpcrt4 -ladvapi32 -lwsock32</commandLine>
         </linkerTool>
       </compileType>

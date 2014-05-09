@@ -1,6 +1,13 @@
 #ifndef OCTOFRAME_H
 #define	OCTOFRAME_H
 
+#include <stdio.h>
+#include <iostream>
+#include <string>
+#include <sstream>
+#include <vector>
+#include <map>
+
 #include <wx/artprov.h>
 #include <wx/xrc/xmlres.h>
 #include <wx/statusbr.h>
@@ -22,8 +29,8 @@
 #include <wx/panel.h>
 #include <wx/menu.h>
 #include <wx/frame.h>
-
-class OctoFrame : public wxFrame {
+class OctoFrame : public wxFrame
+{
 private:
 
 protected:
@@ -41,12 +48,14 @@ protected:
     wxMenu* MenuFile;
     wxMenu* Help;
 
+    std::vector <std::map<std::string, std::string> > parsed;
+
     void recarregar(wxCommandEvent& event);
 
 
 public:
 
-    OctoFrame(wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = wxT("OctoGAGssssss"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize(500, 500), long style = wxCAPTION | wxCLOSE_BOX | wxMINIMIZE_BOX | wxSYSTEM_MENU | wxTAB_TRAVERSAL);
+    OctoFrame(wxWindow* parent, wxWindowID id = wxID_ANY, const wxString& title = wxT("OctoGAG"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize(500, 500), long style = wxCAPTION | wxCLOSE_BOX | wxMINIMIZE_BOX | wxSYSTEM_MENU | wxTAB_TRAVERSAL);
 
 };
 

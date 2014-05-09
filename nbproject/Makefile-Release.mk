@@ -54,7 +54,7 @@ FFLAGS=
 ASFLAGS=
 
 # Link Libraries and Options
-LDLIBSOPTIONS=-L/C/Development/wxWidgets-2.9.5/lib/gcc_lib
+LDLIBSOPTIONS=-L/C/Development/wxWidgets-2.9.5/lib/gcc_lib -L/C/Development/curl-7.36.0/lib -L/C/Users/elvis.nunes/Documents/PersonalFiles/octonine -lcurl -lcurl -lcurldll
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
@@ -67,17 +67,17 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/octogag.exe: ${OBJECTFILES}
 ${OBJECTDIR}/_ext/1406160321/Controller.o: /C/Users/elvis.nunes/Documents/PersonalFiles/octogag/Controller.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/1406160321
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -I/C/Development/wxWidgets-2.9.5/lib/gcc_lib/mswu -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/1406160321/Controller.o /C/Users/elvis.nunes/Documents/PersonalFiles/octogag/Controller.cpp
+	$(COMPILE.cc) -O2 -I/C/Development/wxWidgets-2.9.5/lib/gcc_lib/mswu -I/C/Users/elvis.nunes/Documents/PersonalFiles/octonine -I/C/Development/curl-7.36.0/include -I/C/Development/rapidxml -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/1406160321/Controller.o /C/Users/elvis.nunes/Documents/PersonalFiles/octogag/Controller.cpp
 
 ${OBJECTDIR}/_ext/1406160321/OctoFrame.o: /C/Users/elvis.nunes/Documents/PersonalFiles/octogag/OctoFrame.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/1406160321
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -I/C/Development/wxWidgets-2.9.5/lib/gcc_lib/mswu -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/1406160321/OctoFrame.o /C/Users/elvis.nunes/Documents/PersonalFiles/octogag/OctoFrame.cpp
+	$(COMPILE.cc) -O2 -I/C/Development/wxWidgets-2.9.5/lib/gcc_lib/mswu -I/C/Users/elvis.nunes/Documents/PersonalFiles/octonine -I/C/Development/curl-7.36.0/include -I/C/Development/rapidxml -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/1406160321/OctoFrame.o /C/Users/elvis.nunes/Documents/PersonalFiles/octogag/OctoFrame.cpp
 
 ${OBJECTDIR}/main.o: main.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -I/C/Development/wxWidgets-2.9.5/lib/gcc_lib/mswu -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
+	$(COMPILE.cc) -O2 -I/C/Development/wxWidgets-2.9.5/lib/gcc_lib/mswu -I/C/Users/elvis.nunes/Documents/PersonalFiles/octonine -I/C/Development/curl-7.36.0/include -I/C/Development/rapidxml -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
 
 # Subprojects
 .build-subprojects:
