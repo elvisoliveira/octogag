@@ -9,14 +9,16 @@
             <header-extensions>h</header-extensions>
             <sourceEncoding>UTF-8</sourceEncoding>
             <make-dep-projects/>
-            <sourceRootList/>
+            <sourceRootList>
+                <sourceRootElem>/home/tesla/projects/octogag</sourceRootElem>
+            </sourceRootList>
             <confList>
                 <confElem>
-                    <name>Debug</name>
+                    <name>MinGW</name>
                     <type>1</type>
                 </confElem>
                 <confElem>
-                    <name>Release</name>
+                    <name>_nix</name>
                     <type>1</type>
                 </confElem>
             </confList>

@@ -21,9 +21,9 @@ FC=gfortran
 AS=as
 
 # Macros
-CND_PLATFORM=MinGW_TDM-Windows
-CND_DLIB_EXT=dll
-CND_CONF=Release
+CND_PLATFORM=GNU-Linux-x86
+CND_DLIB_EXT=so
+CND_CONF=MinGW
 CND_DISTDIR=dist
 CND_BUILDDIR=build
 
@@ -35,8 +35,9 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/_ext/1406160321/Controller.o \
-	${OBJECTDIR}/_ext/1406160321/OctoFrame.o \
+	${OBJECTDIR}/_ext/1442889694/Controller.o \
+	${OBJECTDIR}/_ext/1442889694/OctoFrame.o \
+	${OBJECTDIR}/_ext/1442889694/ScrolledImageComponent.o \
 	${OBJECTDIR}/main.o
 
 
@@ -58,21 +59,26 @@ LDLIBSOPTIONS=-L/C/Development/wxWidgets-2.9.5/lib/gcc_lib -L/C/Development/curl
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
-	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/octogag.exe
+	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/octogag
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/octogag.exe: ${OBJECTFILES}
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/octogag: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/octogag ${OBJECTFILES} ${LDLIBSOPTIONS} -mthreads -lwxmsw29u -lwxtiff -lwxjpeg -lwxpng -lwxzlib -lwxregexu -lwxexpat -lkernel32 -luser32 -lwxregexu -lgdi32 -lcomdlg32 -lwinspool -lwinmm -lshell32 -lcomctl32 -lole32 -loleaut32 -luuid -lrpcrt4 -ladvapi32 -lwsock32
 
-${OBJECTDIR}/_ext/1406160321/Controller.o: /C/Users/elvis.nunes/Documents/PersonalFiles/octogag/Controller.cpp 
-	${MKDIR} -p ${OBJECTDIR}/_ext/1406160321
+${OBJECTDIR}/_ext/1442889694/Controller.o: /home/tesla/projects/octogag/Controller.cpp 
+	${MKDIR} -p ${OBJECTDIR}/_ext/1442889694
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -I/C/Development/wxWidgets-2.9.5/lib/gcc_lib/mswu -I/C/Users/elvis.nunes/Documents/PersonalFiles/octonine -I/C/Development/curl-7.36.0/include -I/C/Development/rapidxml -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/1406160321/Controller.o /C/Users/elvis.nunes/Documents/PersonalFiles/octogag/Controller.cpp
+	$(COMPILE.cc) -O2 -I/C/Development/wxWidgets-2.9.5/lib/gcc_lib/mswu -I/C/Users/elvis.nunes/Documents/PersonalFiles/octonine -I/C/Development/curl-7.36.0/include -I/C/Development/rapidxml -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/1442889694/Controller.o /home/tesla/projects/octogag/Controller.cpp
 
-${OBJECTDIR}/_ext/1406160321/OctoFrame.o: /C/Users/elvis.nunes/Documents/PersonalFiles/octogag/OctoFrame.cpp 
-	${MKDIR} -p ${OBJECTDIR}/_ext/1406160321
+${OBJECTDIR}/_ext/1442889694/OctoFrame.o: /home/tesla/projects/octogag/OctoFrame.cpp 
+	${MKDIR} -p ${OBJECTDIR}/_ext/1442889694
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -I/C/Development/wxWidgets-2.9.5/lib/gcc_lib/mswu -I/C/Users/elvis.nunes/Documents/PersonalFiles/octonine -I/C/Development/curl-7.36.0/include -I/C/Development/rapidxml -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/1406160321/OctoFrame.o /C/Users/elvis.nunes/Documents/PersonalFiles/octogag/OctoFrame.cpp
+	$(COMPILE.cc) -O2 -I/C/Development/wxWidgets-2.9.5/lib/gcc_lib/mswu -I/C/Users/elvis.nunes/Documents/PersonalFiles/octonine -I/C/Development/curl-7.36.0/include -I/C/Development/rapidxml -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/1442889694/OctoFrame.o /home/tesla/projects/octogag/OctoFrame.cpp
+
+${OBJECTDIR}/_ext/1442889694/ScrolledImageComponent.o: /home/tesla/projects/octogag/ScrolledImageComponent.cpp 
+	${MKDIR} -p ${OBJECTDIR}/_ext/1442889694
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -I/C/Development/wxWidgets-2.9.5/lib/gcc_lib/mswu -I/C/Users/elvis.nunes/Documents/PersonalFiles/octonine -I/C/Development/curl-7.36.0/include -I/C/Development/rapidxml -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/1442889694/ScrolledImageComponent.o /home/tesla/projects/octogag/ScrolledImageComponent.cpp
 
 ${OBJECTDIR}/main.o: main.cpp 
 	${MKDIR} -p ${OBJECTDIR}
@@ -85,7 +91,7 @@ ${OBJECTDIR}/main.o: main.cpp
 # Clean Targets
 .clean-conf: ${CLEAN_SUBPROJECTS}
 	${RM} -r ${CND_BUILDDIR}/${CND_CONF}
-	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/octogag.exe
+	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/octogag
 
 # Subprojects
 .clean-subprojects:

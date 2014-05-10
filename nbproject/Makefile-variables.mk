@@ -6,22 +6,22 @@
 CND_BASEDIR=`pwd`
 CND_BUILDDIR=build
 CND_DISTDIR=dist
-# Debug configuration
-CND_PLATFORM_Debug=MinGW_TDM-Windows
-CND_ARTIFACT_DIR_Debug=dist/Debug/MinGW_TDM-Windows
-CND_ARTIFACT_NAME_Debug=octogag
-CND_ARTIFACT_PATH_Debug=dist/Debug/MinGW_TDM-Windows/octogag
-CND_PACKAGE_DIR_Debug=dist/Debug/MinGW_TDM-Windows/package
-CND_PACKAGE_NAME_Debug=octogag.tar
-CND_PACKAGE_PATH_Debug=dist/Debug/MinGW_TDM-Windows/package/octogag.tar
-# Release configuration
-CND_PLATFORM_Release=MinGW_TDM-Windows
-CND_ARTIFACT_DIR_Release=dist/Release/MinGW_TDM-Windows
-CND_ARTIFACT_NAME_Release=octogag
-CND_ARTIFACT_PATH_Release=dist/Release/MinGW_TDM-Windows/octogag
-CND_PACKAGE_DIR_Release=dist/Release/MinGW_TDM-Windows/package
-CND_PACKAGE_NAME_Release=octogag.tar
-CND_PACKAGE_PATH_Release=dist/Release/MinGW_TDM-Windows/package/octogag.tar
+# MinGW configuration
+CND_PLATFORM_MinGW=GNU-Linux-x86
+CND_ARTIFACT_DIR_MinGW=dist/MinGW/GNU-Linux-x86
+CND_ARTIFACT_NAME_MinGW=octogag
+CND_ARTIFACT_PATH_MinGW=dist/MinGW/GNU-Linux-x86/octogag
+CND_PACKAGE_DIR_MinGW=dist/MinGW/GNU-Linux-x86/package
+CND_PACKAGE_NAME_MinGW=octogag.tar
+CND_PACKAGE_PATH_MinGW=dist/MinGW/GNU-Linux-x86/package/octogag.tar
+# _nix configuration
+CND_PLATFORM__nix=GNU-Linux-x86
+CND_ARTIFACT_DIR__nix=dist/_nix/GNU-Linux-x86
+CND_ARTIFACT_NAME__nix=octogag
+CND_ARTIFACT_PATH__nix=dist/_nix/GNU-Linux-x86/octogag
+CND_PACKAGE_DIR__nix=dist/_nix/GNU-Linux-x86/package
+CND_PACKAGE_NAME__nix=octogag.tar
+CND_PACKAGE_PATH__nix=dist/_nix/GNU-Linux-x86/package/octogag.tar
 #
 # include compiler specific variables
 #

@@ -27,11 +27,11 @@ CLEAN_SUBPROJECTS=${CLEAN_SUBPROJECTS_${SUBPROJECTS}}
 PROJECTNAME=octogag
 
 # Active Configuration
-DEFAULTCONF=Debug
+DEFAULTCONF=MinGW
 CONF=${DEFAULTCONF}
 
 # All Configurations
-ALLCONFS=Debug Release 
+ALLCONFS=MinGW _nix 
 
 
 # build
