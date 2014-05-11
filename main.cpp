@@ -1,6 +1,7 @@
 #include "wx/wx.h"
 
 #include "OctoFrame.h"
+#include "thread.h"
 
 #include <string.h>
 #include <stdio.h>
@@ -22,7 +23,13 @@ public:
         dialog->Show();
         // set the dialog as top window
         this->SetTopWindow(dialog);
-        //
+
+        Load * work = new Load(dialog);
+
+        work->Create();
+
+        work->Run();
+
         return true;
     }
 };

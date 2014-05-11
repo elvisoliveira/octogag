@@ -37,7 +37,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 OBJECTFILES= \
 	${OBJECTDIR}/_ext/1442889694/Controller.o \
 	${OBJECTDIR}/_ext/1442889694/OctoFrame.o \
-	${OBJECTDIR}/_ext/1442889694/ScrolledImageComponent.o \
+	${OBJECTDIR}/_ext/1442889694/thread.o \
 	${OBJECTDIR}/main.o
 
 
@@ -55,7 +55,7 @@ FFLAGS=
 ASFLAGS=
 
 # Link Libraries and Options
-LDLIBSOPTIONS=-L/usr/include -L/usr/include/curl -L/home/tesla/projects/octonine
+LDLIBSOPTIONS=-L/usr/include -L/usr/include/curl -L/usr/include/wx-2.8 -L/home/tesla/projects/octonine
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
@@ -68,22 +68,22 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/octogag: ${OBJECTFILES}
 ${OBJECTDIR}/_ext/1442889694/Controller.o: /home/tesla/projects/octogag/Controller.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/1442889694
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I/usr/include/curl -I/usr/include/rapidxml -I/home/tesla/projects/octonine -I/usr/include/wx-2.8 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/1442889694/Controller.o /home/tesla/projects/octogag/Controller.cpp
+	$(COMPILE.cc) -g -I/usr/include/curl -I/usr/include/rapidxml -I/usr/include/wx-2.8 -I/home/tesla/projects/octonine -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/1442889694/Controller.o /home/tesla/projects/octogag/Controller.cpp
 
 ${OBJECTDIR}/_ext/1442889694/OctoFrame.o: /home/tesla/projects/octogag/OctoFrame.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/1442889694
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I/usr/include/curl -I/usr/include/rapidxml -I/home/tesla/projects/octonine -I/usr/include/wx-2.8 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/1442889694/OctoFrame.o /home/tesla/projects/octogag/OctoFrame.cpp
+	$(COMPILE.cc) -g -I/usr/include/curl -I/usr/include/rapidxml -I/usr/include/wx-2.8 -I/home/tesla/projects/octonine -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/1442889694/OctoFrame.o /home/tesla/projects/octogag/OctoFrame.cpp
 
-${OBJECTDIR}/_ext/1442889694/ScrolledImageComponent.o: /home/tesla/projects/octogag/ScrolledImageComponent.cpp 
+${OBJECTDIR}/_ext/1442889694/thread.o: /home/tesla/projects/octogag/thread.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/1442889694
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I/usr/include/curl -I/usr/include/rapidxml -I/home/tesla/projects/octonine -I/usr/include/wx-2.8 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/1442889694/ScrolledImageComponent.o /home/tesla/projects/octogag/ScrolledImageComponent.cpp
+	$(COMPILE.cc) -g -I/usr/include/curl -I/usr/include/rapidxml -I/usr/include/wx-2.8 -I/home/tesla/projects/octonine -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/1442889694/thread.o /home/tesla/projects/octogag/thread.cpp
 
 ${OBJECTDIR}/main.o: main.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I/usr/include/curl -I/usr/include/rapidxml -I/home/tesla/projects/octonine -I/usr/include/wx-2.8 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
+	$(COMPILE.cc) -g -I/usr/include/curl -I/usr/include/rapidxml -I/usr/include/wx-2.8 -I/home/tesla/projects/octonine -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
 
 # Subprojects
 .build-subprojects:

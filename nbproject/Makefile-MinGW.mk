@@ -37,7 +37,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 OBJECTFILES= \
 	${OBJECTDIR}/_ext/1442889694/Controller.o \
 	${OBJECTDIR}/_ext/1442889694/OctoFrame.o \
-	${OBJECTDIR}/_ext/1442889694/ScrolledImageComponent.o \
+	${OBJECTDIR}/_ext/1442889694/thread.o \
 	${OBJECTDIR}/main.o
 
 
@@ -75,10 +75,10 @@ ${OBJECTDIR}/_ext/1442889694/OctoFrame.o: /home/tesla/projects/octogag/OctoFrame
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -I/C/Development/wxWidgets-2.9.5/lib/gcc_lib/mswu -I/C/Users/elvis.nunes/Documents/PersonalFiles/octonine -I/C/Development/curl-7.36.0/include -I/C/Development/rapidxml -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/1442889694/OctoFrame.o /home/tesla/projects/octogag/OctoFrame.cpp
 
-${OBJECTDIR}/_ext/1442889694/ScrolledImageComponent.o: /home/tesla/projects/octogag/ScrolledImageComponent.cpp 
+${OBJECTDIR}/_ext/1442889694/thread.o: /home/tesla/projects/octogag/thread.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/1442889694
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -I/C/Development/wxWidgets-2.9.5/lib/gcc_lib/mswu -I/C/Users/elvis.nunes/Documents/PersonalFiles/octonine -I/C/Development/curl-7.36.0/include -I/C/Development/rapidxml -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/1442889694/ScrolledImageComponent.o /home/tesla/projects/octogag/ScrolledImageComponent.cpp
+	$(COMPILE.cc) -O2 -I/C/Development/wxWidgets-2.9.5/lib/gcc_lib/mswu -I/C/Users/elvis.nunes/Documents/PersonalFiles/octonine -I/C/Development/curl-7.36.0/include -I/C/Development/rapidxml -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/1442889694/thread.o /home/tesla/projects/octogag/thread.cpp
 
 ${OBJECTDIR}/main.o: main.cpp 
 	${MKDIR} -p ${OBJECTDIR}

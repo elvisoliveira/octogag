@@ -6,15 +6,15 @@
                    projectFiles="true">
       <itemPath>/home/tesla/projects/octogag/Controller.h</itemPath>
       <itemPath>/home/tesla/projects/octogag/OctoFrame.h</itemPath>
-      <itemPath>/home/tesla/projects/octogag/ScrolledImageComponent.h</itemPath>
+      <itemPath>/home/tesla/projects/octogag/thread.h</itemPath>
     </logicalFolder>
     <logicalFolder name="SourceFiles"
                    displayName="Arquivos de Código-Fonte"
                    projectFiles="true">
       <itemPath>/home/tesla/projects/octogag/Controller.cpp</itemPath>
       <itemPath>/home/tesla/projects/octogag/OctoFrame.cpp</itemPath>
-      <itemPath>/home/tesla/projects/octogag/ScrolledImageComponent.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
+      <itemPath>/home/tesla/projects/octogag/thread.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Arquivos de Recurso"
@@ -113,17 +113,17 @@
             tool="3"
             flavor2="0">
       </item>
-      <item path="/home/tesla/projects/octogag/ScrolledImageComponent.cpp"
-            ex="false"
-            tool="1"
-            flavor2="0">
-      </item>
-      <item path="/home/tesla/projects/octogag/ScrolledImageComponent.h"
+      <item path="/home/tesla/projects/octogag/tech.jpg"
             ex="false"
             tool="3"
             flavor2="0">
       </item>
-      <item path="/home/tesla/projects/octogag/tech.jpg"
+      <item path="/home/tesla/projects/octogag/thread.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="/home/tesla/projects/octogag/thread.h"
             ex="false"
             tool="3"
             flavor2="0">
@@ -142,8 +142,8 @@
           <incDir>
             <pElem>/usr/include/curl</pElem>
             <pElem>/usr/include/rapidxml</pElem>
-            <pElem>/home/tesla/projects/octonine</pElem>
             <pElem>/usr/include/wx-2.8</pElem>
+            <pElem>/home/tesla/projects/octonine</pElem>
           </incDir>
           <commandLine>`wx-config --cxxflags`</commandLine>
         </ccTool>
@@ -151,6 +151,7 @@
           <linkerAddLib>
             <pElem>/usr/include</pElem>
             <pElem>/usr/include/curl</pElem>
+            <pElem>/usr/include/wx-2.8</pElem>
             <pElem>/home/tesla/projects/octonine</pElem>
           </linkerAddLib>
           <commandLine>`wx-config --libs` -lcurl</commandLine>
@@ -186,17 +187,17 @@
             tool="3"
             flavor2="0">
       </item>
-      <item path="/home/tesla/projects/octogag/ScrolledImageComponent.cpp"
-            ex="false"
-            tool="1"
-            flavor2="0">
-      </item>
-      <item path="/home/tesla/projects/octogag/ScrolledImageComponent.h"
+      <item path="/home/tesla/projects/octogag/tech.jpg"
             ex="false"
             tool="3"
             flavor2="0">
       </item>
-      <item path="/home/tesla/projects/octogag/tech.jpg"
+      <item path="/home/tesla/projects/octogag/thread.cpp"
+            ex="false"
+            tool="1"
+            flavor2="0">
+      </item>
+      <item path="/home/tesla/projects/octogag/thread.h"
             ex="false"
             tool="3"
             flavor2="0">
