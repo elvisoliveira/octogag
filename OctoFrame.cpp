@@ -147,16 +147,7 @@ bool OctoFrame::firstload()
 
         wxString wxTitle(title.c_str(), wxConvUTF8);
 
-        wxCommandEvent e(wxEVT_PROC_DATA_READ);
-        ProcessEventData *ed = new ProcessEventData();
-        ed->SetData(buff);
-        ed->SetProcess(m_process);
-
-        e.SetClientData(ed);
-
         m_listBox1->Append(wxTitle);
-
-        m_listBox1->SetClientData();
 
         //        std::cout << "[" << i << "]" << "[points]" << OctoFrame::parsed.at(i)["points"] << std::endl;
         //        std::cout << "[" << i << "]" << "[comments]" << OctoFrame::parsed.at(i)["comments"] << std::endl;
