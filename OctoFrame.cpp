@@ -1,8 +1,7 @@
 #include "OctoFrame.h"
-#include "Controller.h"
 
-OctoFrame::OctoFrame(wxWindow* parent, wxWindowID id, const wxString& title, const wxPoint& pos, const wxSize& size, long style) : wxFrame(parent, id, title, pos, size, style)
-{
+
+OctoFrame::OctoFrame(wxWindow* parent, wxWindowID id, const wxString& title, const wxPoint& pos, const wxSize& size, long style) : wxFrame(parent, id, title, pos, size, style) {
 
     // required to manipulate multiple image formats
     wxInitAllImageHandlers();
@@ -126,18 +125,27 @@ OctoFrame::OctoFrame(wxWindow* parent, wxWindowID id, const wxString& title, con
     m_listBox1->Connect(wxEVT_COMMAND_LISTBOX_DOUBLECLICKED, wxCommandEventHandler(OctoFrame::showpost), NULL, this);
 }
 
-void OctoFrame::showpost(wxCommandEvent& event)
-{
-    std::cout << event.GetClientData();
+void OctoFrame::showpost(wxCommandEvent& event) {
 
-    wxLogError(event.GetString());
+    int selection = m_listBox1->GetSelection();
+
+    std::string url = OctoFrame::parsed.at(selection)["content"];
+    
+    std::string teste = list->getImage(url);
+    
+    std::cout << "[points]" << OctoFrame::parsed.at(selection)["points"] << std::endl;
+    std::cout << "[comments]" << OctoFrame::parsed.at(selection)["comments"] << std::endl;
+    std::cout << "[id]" << OctoFrame::parsed.at(selection)["id"] << std::endl;
+    std::cout << "[next]" << OctoFrame::parsed.at(selection)["next"] << std::endl;
+    std::cout << "[content]" << OctoFrame::parsed.at(selection)["content"] << std::endl;
+    std::cout << "[title]" << OctoFrame::parsed.at(selection)["title"] << std::endl;
 
     event.Skip();
 }
 
-bool OctoFrame::firstload()
-{
-    Controller * list = new Controller();
+bool OctoFrame::firstload() {
+
+    list = new Controller();
 
     OctoFrame::parsed = list->getVector();
 
@@ -149,13 +157,6 @@ bool OctoFrame::firstload()
 
         m_listBox1->Append(wxTitle);
 
-        //        std::cout << "[" << i << "]" << "[points]" << OctoFrame::parsed.at(i)["points"] << std::endl;
-        //        std::cout << "[" << i << "]" << "[comments]" << OctoFrame::parsed.at(i)["comments"] << std::endl;
-        //        std::cout << "[" << i << "]" << "[id]" << OctoFrame::parsed.at(i)["id"] << std::endl;
-        //        std::cout << "[" << i << "]" << "[next]" << OctoFrame::parsed.at(i)["next"] << std::endl;
-        //        std::cout << "[" << i << "]" << "[content]" << OctoFrame::parsed.at(i)["content"] << std::endl;
-        //        std::cout << "[" << i << "]" << "[title]" << OctoFrame::parsed.at(i)["title"] << std::endl;
-
     }
 
     // wxLogError(wxT("terminou"));
@@ -163,12 +164,10 @@ bool OctoFrame::firstload()
     return true;
 }
 
-void OctoFrame::LoadingStart()
-{
+void OctoFrame::LoadingStart() {
     m_gauge1->Pulse();
 }
 
-void OctoFrame::LoadingStop()
-{
+void OctoFrame::LoadingStop() {
     m_gauge1->SetValue(0);
 }

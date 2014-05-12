@@ -9,12 +9,12 @@
 #include <cstring>
 #include <vector>
 #include <map>
-
 class Controller
 {
 public:
     Controller();
     std::vector <std::map<std::string, std::string> > getVector();
+    std::string getImage(std::string url);
 private:
     std::vector <std::map<std::string, std::string> > vector;
 };

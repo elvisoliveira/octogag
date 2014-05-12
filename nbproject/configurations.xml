@@ -4,24 +4,24 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Arquivos de Cabeçalho"
                    projectFiles="true">
-      <itemPath>/home/tesla/projects/octogag/Controller.h</itemPath>
-      <itemPath>/home/tesla/projects/octogag/OctoFrame.h</itemPath>
-      <itemPath>/home/tesla/projects/octogag/thread.h</itemPath>
+      <itemPath>C:/development/projects/octogag/Controller.h</itemPath>
+      <itemPath>C:/development/projects/octogag/OctoFrame.h</itemPath>
+      <itemPath>C:/development/projects/octogag/thread.h</itemPath>
     </logicalFolder>
     <logicalFolder name="SourceFiles"
                    displayName="Arquivos de Código-Fonte"
                    projectFiles="true">
-      <itemPath>/home/tesla/projects/octogag/Controller.cpp</itemPath>
-      <itemPath>/home/tesla/projects/octogag/OctoFrame.cpp</itemPath>
+      <itemPath>C:/development/projects/octogag/Controller.cpp</itemPath>
+      <itemPath>C:/development/projects/octogag/OctoFrame.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
-      <itemPath>/home/tesla/projects/octogag/thread.cpp</itemPath>
+      <itemPath>C:/development/projects/octogag/thread.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Arquivos de Recurso"
                    projectFiles="true">
-      <itemPath>/home/tesla/projects/octogag/.gitignore</itemPath>
-      <itemPath>/home/tesla/projects/octogag/README.md</itemPath>
-      <itemPath>/home/tesla/projects/octogag/tech.jpg</itemPath>
+      <itemPath>C:/development/projects/octogag/.gitignore</itemPath>
+      <itemPath>C:/development/projects/octogag/README.md</itemPath>
+      <itemPath>C:/development/projects/octogag/tech.jpg</itemPath>
     </logicalFolder>
     <logicalFolder name="octogag" displayName="octogag" projectFiles="true">
     </logicalFolder>
@@ -55,10 +55,10 @@
         <ccTool>
           <developmentMode>5</developmentMode>
           <incDir>
-            <pElem>C:/Development/wxWidgets-2.9.5/lib/gcc_lib/mswu</pElem>
-            <pElem>C:/Users/elvis.nunes/Documents/PersonalFiles/octonine</pElem>
-            <pElem>C:/Development/curl-7.36.0/include</pElem>
-            <pElem>C:/Development/rapidxml</pElem>
+            <pElem>C:/development/wxWidgets-2.9.5/lib/gcc_lib/mswu</pElem>
+            <pElem>C:/development/curl-7.36.0/include</pElem>
+            <pElem>C:/development/projects/octonine</pElem>
+            <pElem>C:/development/rapidxml</pElem>
           </incDir>
           <commandLine>`wx-config --cxxflags`</commandLine>
         </ccTool>
@@ -71,9 +71,9 @@
         <linkerTool>
           <output>${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/octogag</output>
           <linkerAddLib>
-            <pElem>C:/Development/wxWidgets-2.9.5/lib/gcc_lib</pElem>
-            <pElem>C:/Development/curl-7.36.0/lib</pElem>
-            <pElem>C:/Users/elvis.nunes/Documents/PersonalFiles/octonine</pElem>
+            <pElem>C:/development/wxWidgets-2.9.5/lib/gcc_lib</pElem>
+            <pElem>C:/development/projects/octonine</pElem>
+            <pElem>C:/development/curl-7.36.0/lib</pElem>
           </linkerAddLib>
           <linkerLibItems>
             <linkerLibLibItem>curl</linkerLibLibItem>
@@ -83,47 +83,47 @@
           <commandLine>-mthreads -lwxmsw29u -lwxtiff -lwxjpeg -lwxpng -lwxzlib -lwxregexu -lwxexpat -lkernel32 -luser32 -lwxregexu -lgdi32 -lcomdlg32 -lwinspool -lwinmm -lshell32 -lcomctl32 -lole32 -loleaut32 -luuid -lrpcrt4 -ladvapi32 -lwsock32</commandLine>
         </linkerTool>
       </compileType>
-      <item path="/home/tesla/projects/octogag/.gitignore"
+      <item path="C:/development/projects/octogag/.gitignore"
             ex="false"
             tool="3"
             flavor2="0">
       </item>
-      <item path="/home/tesla/projects/octogag/Controller.cpp"
+      <item path="C:/development/projects/octogag/Controller.cpp"
             ex="false"
             tool="1"
             flavor2="0">
       </item>
-      <item path="/home/tesla/projects/octogag/Controller.h"
+      <item path="C:/development/projects/octogag/Controller.h"
             ex="false"
             tool="3"
             flavor2="0">
       </item>
-      <item path="/home/tesla/projects/octogag/OctoFrame.cpp"
+      <item path="C:/development/projects/octogag/OctoFrame.cpp"
             ex="false"
             tool="1"
             flavor2="0">
       </item>
-      <item path="/home/tesla/projects/octogag/OctoFrame.h"
+      <item path="C:/development/projects/octogag/OctoFrame.h"
             ex="false"
             tool="3"
             flavor2="0">
       </item>
-      <item path="/home/tesla/projects/octogag/README.md"
+      <item path="C:/development/projects/octogag/README.md"
             ex="false"
             tool="3"
             flavor2="0">
       </item>
-      <item path="/home/tesla/projects/octogag/tech.jpg"
+      <item path="C:/development/projects/octogag/tech.jpg"
             ex="false"
             tool="3"
             flavor2="0">
       </item>
-      <item path="/home/tesla/projects/octogag/thread.cpp"
+      <item path="C:/development/projects/octogag/thread.cpp"
             ex="false"
             tool="1"
             flavor2="0">
       </item>
-      <item path="/home/tesla/projects/octogag/thread.h"
+      <item path="C:/development/projects/octogag/thread.h"
             ex="false"
             tool="3"
             flavor2="0">
@@ -157,47 +157,47 @@
           <commandLine>`wx-config --libs` -lcurl</commandLine>
         </linkerTool>
       </compileType>
-      <item path="/home/tesla/projects/octogag/.gitignore"
+      <item path="C:/development/projects/octogag/.gitignore"
             ex="false"
             tool="3"
             flavor2="0">
       </item>
-      <item path="/home/tesla/projects/octogag/Controller.cpp"
+      <item path="C:/development/projects/octogag/Controller.cpp"
             ex="false"
             tool="1"
             flavor2="0">
       </item>
-      <item path="/home/tesla/projects/octogag/Controller.h"
+      <item path="C:/development/projects/octogag/Controller.h"
             ex="false"
             tool="3"
             flavor2="0">
       </item>
-      <item path="/home/tesla/projects/octogag/OctoFrame.cpp"
+      <item path="C:/development/projects/octogag/OctoFrame.cpp"
             ex="false"
             tool="1"
             flavor2="0">
       </item>
-      <item path="/home/tesla/projects/octogag/OctoFrame.h"
+      <item path="C:/development/projects/octogag/OctoFrame.h"
             ex="false"
             tool="3"
             flavor2="0">
       </item>
-      <item path="/home/tesla/projects/octogag/README.md"
+      <item path="C:/development/projects/octogag/README.md"
             ex="false"
             tool="3"
             flavor2="0">
       </item>
-      <item path="/home/tesla/projects/octogag/tech.jpg"
+      <item path="C:/development/projects/octogag/tech.jpg"
             ex="false"
             tool="3"
             flavor2="0">
       </item>
-      <item path="/home/tesla/projects/octogag/thread.cpp"
+      <item path="C:/development/projects/octogag/thread.cpp"
             ex="false"
             tool="1"
             flavor2="0">
       </item>
-      <item path="/home/tesla/projects/octogag/thread.h"
+      <item path="C:/development/projects/octogag/thread.h"
             ex="false"
             tool="3"
             flavor2="0">

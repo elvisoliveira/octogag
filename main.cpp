@@ -34,4 +34,4 @@ public:
     }
 };
 
-IMPLEMENT_APP(MyApp)
+IMPLEMENT_APP(MyApp);
