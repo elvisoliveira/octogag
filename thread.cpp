@@ -9,7 +9,8 @@ void * LoadingStart::Entry()
 {
     while (makeloop == true) {
         gui->LoadingStart();
-        Sleep(200);
+        Sleep(40);
+        // wxSafeYield();
     }
     gui->LoadingStop();
 }
