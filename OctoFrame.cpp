@@ -6,7 +6,7 @@ OctoFrame::OctoFrame(wxWindow* parent, wxWindowID id, const wxString& title, con
     // required to manipulate multiple image formats
     wxInitAllImageHandlers();
 
-    this->SetSizeHints(wxSize(500, 500), wxSize(500, 500));
+    this->SetSizeHints(wxSize(-1, -1), wxSize(-1, -1));
 
     StatusBar = this->CreateStatusBar(1, wxST_SIZEGRIP, wxID_ANY);
     wxBoxSizer* BoxDefault;
@@ -22,9 +22,10 @@ OctoFrame::OctoFrame(wxWindow* parent, wxWindowID id, const wxString& title, con
     wxBoxSizer* BoxImage;
     BoxImage = new wxBoxSizer(wxHORIZONTAL);
 
-    ImageScroll = new wxScrolledWindow(PanelDefault, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxHSCROLL | wxVSCROLL);
-    ImageScroll->SetScrollRate(5, 5);
-    wxBoxSizer* BoxImageScroll;
+
+    ImageScroll = new wxScrolledWindow(PanelDefault, wxID_ANY, wxDefaultPosition, wxSize(600, -1), wxHSCROLL | wxVSCROLL);
+
+
     BoxImageScroll = new wxBoxSizer(wxVERTICAL);
 
     Image = new wxStaticBitmap(ImageScroll, wxID_ANY, wxBitmap(wxT("tech.jpg"), wxBITMAP_TYPE_ANY), wxDefaultPosition, wxDefaultSize, 0);
@@ -39,8 +40,9 @@ OctoFrame::OctoFrame(wxWindow* parent, wxWindowID id, const wxString& title, con
     wxBoxSizer* bSizer11;
     bSizer11 = new wxBoxSizer(wxVERTICAL);
 
-    m_listBox1 = new wxListBox(PanelDefault, wxID_ANY, wxDefaultPosition, wxDefaultSize, 0, NULL, 0);
-    bSizer11->Add(m_listBox1, 1, wxALL | wxEXPAND, 5);
+    m_listBox1 = new wxListBox(PanelDefault, wxID_ANY, wxDefaultPosition, wxSize(250, -1), 0, NULL, wxLB_HSCROLL);
+    bSizer11->Add(m_listBox1, 1, wxEXPAND | wxRIGHT | wxLEFT, 5);
+
 
 
     BoxImage->Add(bSizer11, 1, wxEXPAND, 5);
@@ -144,6 +146,20 @@ void OctoFrame::showpost(wxCommandEvent& event)
     std::cout << "[filename]" << image["name"] << std::endl;
     std::cout << "[fileformat]" << image["format"] << std::endl;
     std::cout << "[filelocation]" << image["location"] << std::endl;
+
+    wxBitmap gagimage = wxBitmap(image["location"], wxBITMAP_TYPE_ANY);
+
+    Image = new wxStaticBitmap(ImageScroll, wxID_ANY, gagimage, wxDefaultPosition, wxDefaultSize, 0);
+
+    BoxImageScroll->Clear(true);
+
+    BoxImageScroll->Add(Image, 1, wxALIGN_CENTER_HORIZONTAL | wxEXPAND, 5);
+
+    int width = gagimage.GetWidth();
+
+    int height = gagimage.GetHeight();
+
+    ImageScroll->SetScrollbars(20, 20, width / 10, height / 10, 0, 0);
 
     event.Skip();
 }

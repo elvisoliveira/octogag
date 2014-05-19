@@ -42,6 +42,7 @@ protected:
     wxStaticLine * m_staticline4;
     wxScrolledWindow * ImageScroll;
     wxStaticBitmap * Image;
+    wxBoxSizer * BoxImageScroll;
     wxListBox * m_listBox1;
     wxStaticLine * Divisor;
     wxGauge * m_gauge1;
@@ -53,7 +54,7 @@ protected:
     void recarregar(wxCommandEvent& event);
     void showpost(wxCommandEvent& event);
 public:
-    OctoFrame(wxWindow * parent, wxWindowID id = wxID_ANY, const wxString& title = wxT("OctoGAG"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize(500, 500), long style = wxCAPTION | wxCLOSE_BOX | wxMINIMIZE_BOX | wxSYSTEM_MENU | wxTAB_TRAVERSAL);
+    OctoFrame(wxWindow * parent, wxWindowID id = wxID_ANY, const wxString& title = wxT("OctoGAG"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize(800, 450), long style = wxCAPTION | wxCLOSE_BOX | wxMINIMIZE_BOX | wxSYSTEM_MENU | wxTAB_TRAVERSAL);
     std::vector <std::map<std::string, std::string> > parsed;
     bool firstload();
     void LoadingStart();
