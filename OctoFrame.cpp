@@ -9,44 +9,74 @@ OctoFrame::OctoFrame(wxWindow* parent, wxWindowID id, const wxString& title, con
     this->SetSizeHints(wxSize(-1, -1), wxSize(-1, -1));
 
     StatusBar = this->CreateStatusBar(1, wxST_SIZEGRIP, wxID_ANY);
-    wxBoxSizer* BoxDefault;
+    wxBoxSizer * BoxDefault;
     BoxDefault = new wxBoxSizer(wxVERTICAL);
 
+    /* wxPanel
+     * primary panel
+     */
     PanelDefault = new wxPanel(this, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxTAB_TRAVERSAL);
-    wxBoxSizer* BoxMain;
+
+    /* wxBoxSizer
+     * put all together (article image and articles list)
+     */
+    wxBoxSizer * BoxMain;
     BoxMain = new wxBoxSizer(wxVERTICAL);
 
-    m_staticline4 = new wxStaticLine(PanelDefault, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxLI_HORIZONTAL);
-    BoxMain->Add(m_staticline4, 0, wxEXPAND, 5);
+    /* wxStaticLine
+     * line that split the menu from the content
+     */
+    line_menu = new wxStaticLine(PanelDefault, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxLI_HORIZONTAL);
+    BoxMain->Add(line_menu, 0, wxEXPAND, 5);
 
-    wxBoxSizer* BoxImage;
+    /* wxBoxSizer
+     * image container
+     */
+    wxBoxSizer * BoxImage;
     BoxImage = new wxBoxSizer(wxHORIZONTAL);
 
+    /**********   Image Section  **********/
 
-    ImageScroll = new wxScrolledWindow(PanelDefault, wxID_ANY, wxDefaultPosition, wxSize(600, -1), wxHSCROLL | wxVSCROLL);
+    /* wxScrolledWindow
+     * scroll widget that contain some data inside it
+     */
+    ImageScroll = new wxScrolledWindow(PanelDefault, wxID_ANY, wxDefaultPosition, wxSize(500, -1), wxHSCROLL | wxVSCROLL);
 
+    /* wxStaticBitmap
+     * image file
+     */
+    Image = new wxStaticBitmap(ImageScroll, wxID_ANY, wxBitmap(wxT("tech.jpg"), wxBITMAP_TYPE_ANY), wxDefaultPosition, wxSize(-1, -1), 0);
 
+    /* wxBoxSizer
+     * container the the scroll widget (wxScrolledWindow)
+     */
+    wxBoxSizer * BoxImageScroll;
     BoxImageScroll = new wxBoxSizer(wxVERTICAL);
-
-    Image = new wxStaticBitmap(ImageScroll, wxID_ANY, wxBitmap(wxT("tech.jpg"), wxBITMAP_TYPE_ANY), wxDefaultPosition, wxDefaultSize, 0);
     BoxImageScroll->Add(Image, 1, wxALIGN_CENTER_HORIZONTAL | wxEXPAND, 5);
 
-
+    /* set the sizer
+     */
     ImageScroll->SetSizer(BoxImageScroll);
+
+    /* make the layout
+     */
     ImageScroll->Layout();
+
+    /* fir the scroll widget with it's container
+     */
     BoxImageScroll->Fit(ImageScroll);
+
+    /**********   Image Section  **********/
+
     BoxImage->Add(ImageScroll, 1, wxEXPAND, 5);
 
     wxBoxSizer* bSizer11;
     bSizer11 = new wxBoxSizer(wxVERTICAL);
 
-    m_listBox1 = new wxListBox(PanelDefault, wxID_ANY, wxDefaultPosition, wxSize(250, -1), 0, NULL, wxLB_HSCROLL);
+    m_listBox1 = new wxListBox(PanelDefault, wxID_ANY, wxDefaultPosition, wxSize(300, -1), 0, NULL, wxLB_HSCROLL);
     bSizer11->Add(m_listBox1, 1, wxEXPAND | wxRIGHT | wxLEFT, 5);
 
-
-
     BoxImage->Add(bSizer11, 1, wxEXPAND, 5);
-
 
     BoxMain->Add(BoxImage, 1, wxEXPAND | wxALL, 5);
 
@@ -79,12 +109,9 @@ OctoFrame::OctoFrame(wxWindow* parent, wxWindowID id, const wxString& title, con
 
     bSizer7->Add(ButtomNext, 0, wxALL | wxALIGN_CENTER_VERTICAL, 5);
 
-
     BoxOptions->Add(bSizer7, 0, 0, 5);
 
-
     BoxMain->Add(BoxOptions, 0, wxALIGN_RIGHT | wxEXPAND, 5);
-
 
     PanelDefault->SetSizer(BoxMain);
     PanelDefault->Layout();
@@ -149,17 +176,8 @@ void OctoFrame::showpost(wxCommandEvent& event)
 
     wxBitmap gagimage = wxBitmap(image["location"], wxBITMAP_TYPE_ANY);
 
-    Image = new wxStaticBitmap(ImageScroll, wxID_ANY, gagimage, wxDefaultPosition, wxDefaultSize, 0);
 
-    BoxImageScroll->Clear(true);
 
-    BoxImageScroll->Add(Image, 1, wxALIGN_CENTER_HORIZONTAL | wxEXPAND, 5);
-
-    int width = gagimage.GetWidth();
-
-    int height = gagimage.GetHeight();
-
-    ImageScroll->SetScrollbars(20, 20, width / 10, height / 10, 0, 0);
 
     event.Skip();
 }

@@ -39,7 +39,7 @@ private:
 protected:
     wxStatusBar * StatusBar;
     wxPanel * PanelDefault;
-    wxStaticLine * m_staticline4;
+    wxStaticLine * line_menu;
     wxScrolledWindow * ImageScroll;
     wxStaticBitmap * Image;
     wxBoxSizer * BoxImageScroll;
