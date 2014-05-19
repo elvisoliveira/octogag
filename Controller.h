@@ -14,7 +14,7 @@ class Controller
 public:
     Controller();
     std::vector <std::map<std::string, std::string> > getVector();
-    std::string getImage(std::string url);
+    std::map<std::string, std::string> getImage(std::string url);
 private:
     std::vector <std::map<std::string, std::string> > vector;
 };

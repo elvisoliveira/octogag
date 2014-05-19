@@ -7,7 +7,8 @@
 
 void * LoadingStart::Entry()
 {
-    while (makeloop == true) {
+    while (makeloop == true)
+    {
         gui->LoadingStart();
         Sleep(40);
         // wxSafeYield();
@@ -39,7 +40,8 @@ void * Load::Entry()
 
     start->Run();
 
-    if (gui->firstload() == true) {
+    if (gui->firstload() == true)
+    {
 
         start->makeloop = false;
 

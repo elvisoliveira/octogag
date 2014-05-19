@@ -1,7 +1,7 @@
 #include "OctoFrame.h"
 
-
-OctoFrame::OctoFrame(wxWindow* parent, wxWindowID id, const wxString& title, const wxPoint& pos, const wxSize& size, long style) : wxFrame(parent, id, title, pos, size, style) {
+OctoFrame::OctoFrame(wxWindow* parent, wxWindowID id, const wxString& title, const wxPoint& pos, const wxSize& size, long style) : wxFrame(parent, id, title, pos, size, style)
+{
 
     // required to manipulate multiple image formats
     wxInitAllImageHandlers();
@@ -125,14 +125,15 @@ OctoFrame::OctoFrame(wxWindow* parent, wxWindowID id, const wxString& title, con
     m_listBox1->Connect(wxEVT_COMMAND_LISTBOX_DOUBLECLICKED, wxCommandEventHandler(OctoFrame::showpost), NULL, this);
 }
 
-void OctoFrame::showpost(wxCommandEvent& event) {
+void OctoFrame::showpost(wxCommandEvent& event)
+{
 
     int selection = m_listBox1->GetSelection();
 
     std::string url = OctoFrame::parsed.at(selection)["content"];
-    
-    std::string teste = list->getImage(url);
-    
+
+    std::map<std::string, std::string> image = list->getImage(url);
+
     std::cout << "[points]" << OctoFrame::parsed.at(selection)["points"] << std::endl;
     std::cout << "[comments]" << OctoFrame::parsed.at(selection)["comments"] << std::endl;
     std::cout << "[id]" << OctoFrame::parsed.at(selection)["id"] << std::endl;
@@ -140,16 +141,22 @@ void OctoFrame::showpost(wxCommandEvent& event) {
     std::cout << "[content]" << OctoFrame::parsed.at(selection)["content"] << std::endl;
     std::cout << "[title]" << OctoFrame::parsed.at(selection)["title"] << std::endl;
 
+    std::cout << "[filename]" << image["name"] << std::endl;
+    std::cout << "[fileformat]" << image["format"] << std::endl;
+    std::cout << "[filelocation]" << image["location"] << std::endl;
+
     event.Skip();
 }
 
-bool OctoFrame::firstload() {
+bool OctoFrame::firstload()
+{
 
     list = new Controller();
 
     OctoFrame::parsed = list->getVector();
 
-    for (int i = 0; i < OctoFrame::parsed.size(); i++) {
+    for (int i = 0; i < OctoFrame::parsed.size(); i++)
+    {
 
         std::string title = OctoFrame::parsed.at(i)["title"];
 
@@ -164,10 +171,12 @@ bool OctoFrame::firstload() {
     return true;
 }
 
-void OctoFrame::LoadingStart() {
+void OctoFrame::LoadingStart()
+{
     m_gauge1->Pulse();
 }
 
-void OctoFrame::LoadingStop() {
+void OctoFrame::LoadingStop()
+{
     m_gauge1->SetValue(0);
 }
