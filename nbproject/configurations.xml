@@ -4,26 +4,23 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Arquivos de Cabeçalho"
                    projectFiles="true">
-      <itemPath>C:/development/projects/octogag/Controller.h</itemPath>
-      <itemPath>C:/development/projects/octogag/OctoFrame.h</itemPath>
-      <itemPath>C:/development/projects/octogag/thread.h</itemPath>
+      <itemPath>Controller.h</itemPath>
+      <itemPath>OctoFrame.h</itemPath>
+      <itemPath>thread.h</itemPath>
     </logicalFolder>
     <logicalFolder name="SourceFiles"
                    displayName="Arquivos de Código-Fonte"
                    projectFiles="true">
-      <itemPath>C:/development/projects/octogag/Controller.cpp</itemPath>
-      <itemPath>C:/development/projects/octogag/OctoFrame.cpp</itemPath>
+      <itemPath>Controller.cpp</itemPath>
+      <itemPath>OctoFrame.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
-      <itemPath>C:/development/projects/octogag/thread.cpp</itemPath>
+      <itemPath>thread.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Arquivos de Recurso"
                    projectFiles="true">
-      <itemPath>C:/development/projects/octogag/.gitignore</itemPath>
-      <itemPath>C:/development/projects/octogag/README.md</itemPath>
-      <itemPath>C:/development/projects/octogag/tech.jpg</itemPath>
-    </logicalFolder>
-    <logicalFolder name="octogag" displayName="octogag" projectFiles="true">
+      <itemPath>README.md</itemPath>
+      <itemPath>tech.jpg</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
                    displayName="Arquivos de Teste"
@@ -83,126 +80,70 @@
           <commandLine>-mthreads -lwxmsw29u -lwxtiff -lwxjpeg -lwxpng -lwxzlib -lwxregexu -lwxexpat -lkernel32 -luser32 -lwxregexu -lgdi32 -lcomdlg32 -lwinspool -lwinmm -lshell32 -lcomctl32 -lole32 -loleaut32 -luuid -lrpcrt4 -ladvapi32 -lwsock32</commandLine>
         </linkerTool>
       </compileType>
-      <item path="C:/development/projects/octogag/.gitignore"
-            ex="false"
-            tool="3"
-            flavor2="0">
+      <item path="Controller.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="C:/development/projects/octogag/Controller.cpp"
-            ex="false"
-            tool="1"
-            flavor2="0">
+      <item path="Controller.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="C:/development/projects/octogag/Controller.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
+      <item path="OctoFrame.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="C:/development/projects/octogag/OctoFrame.cpp"
-            ex="false"
-            tool="1"
-            flavor2="0">
+      <item path="OctoFrame.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="C:/development/projects/octogag/OctoFrame.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="C:/development/projects/octogag/README.md"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="C:/development/projects/octogag/tech.jpg"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="C:/development/projects/octogag/thread.cpp"
-            ex="false"
-            tool="1"
-            flavor2="0">
-      </item>
-      <item path="C:/development/projects/octogag/thread.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
+      <item path="README.md" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="tech.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="thread.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="thread.h" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
     <conf name="_nix" type="1">
       <toolsSet>
-        <compilerSet>default</compilerSet>
+        <compilerSet>GNU|GNU</compilerSet>
         <dependencyChecking>true</dependencyChecking>
         <rebuildPropChanged>false</rebuildPropChanged>
       </toolsSet>
       <compileType>
         <ccTool>
           <incDir>
-            <pElem>/usr/include/curl</pElem>
-            <pElem>/usr/include/rapidxml</pElem>
-            <pElem>/usr/include/wx-2.8</pElem>
+            <pElem>/home/tesla/projects/libs/curl/include</pElem>
+            <pElem>/home/tesla/projects/libs/rapidxml</pElem>
+            <pElem>/home/tesla/projects/libs/wxwidgets/include/wx-2.8</pElem>
             <pElem>/home/tesla/projects/octonine</pElem>
+            <pElem>../libs/wxwidgets/lib/wx/include/gtk2-ansi-release-2.8</pElem>
           </incDir>
-          <commandLine>`wx-config --cxxflags`</commandLine>
+          <commandLine>`/home/tesla/projects/libs/wxwidgets/bin/wx-config --cxxflags`</commandLine>
         </ccTool>
         <linkerTool>
           <linkerAddLib>
             <pElem>/usr/include</pElem>
-            <pElem>/usr/include/curl</pElem>
-            <pElem>/usr/include/wx-2.8</pElem>
+            <pElem>/home/tesla/projects/libs/curl/lib</pElem>
+            <pElem>/home/tesla/projects/libs/wxwidgets/lib</pElem>
             <pElem>/home/tesla/projects/octonine</pElem>
+            <pElem>../libs/wxwidgets/lib/wx/include/gtk2-ansi-release-2.8</pElem>
           </linkerAddLib>
-          <commandLine>`wx-config --libs` -lcurl</commandLine>
+          <commandLine>`/home/tesla/projects/libs/wxwidgets/bin/wx-config --libs` -lcurl</commandLine>
         </linkerTool>
       </compileType>
-      <item path="C:/development/projects/octogag/.gitignore"
-            ex="false"
-            tool="3"
-            flavor2="0">
+      <item path="Controller.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="C:/development/projects/octogag/Controller.cpp"
-            ex="false"
-            tool="1"
-            flavor2="0">
+      <item path="Controller.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="C:/development/projects/octogag/Controller.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
+      <item path="OctoFrame.cpp" ex="false" tool="1" flavor2="0">
       </item>
-      <item path="C:/development/projects/octogag/OctoFrame.cpp"
-            ex="false"
-            tool="1"
-            flavor2="0">
+      <item path="OctoFrame.h" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="C:/development/projects/octogag/OctoFrame.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="C:/development/projects/octogag/README.md"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="C:/development/projects/octogag/tech.jpg"
-            ex="false"
-            tool="3"
-            flavor2="0">
-      </item>
-      <item path="C:/development/projects/octogag/thread.cpp"
-            ex="false"
-            tool="1"
-            flavor2="0">
-      </item>
-      <item path="C:/development/projects/octogag/thread.h"
-            ex="false"
-            tool="3"
-            flavor2="0">
+      <item path="README.md" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="tech.jpg" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="thread.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="thread.h" ex="false" tool="3" flavor2="0">
       </item>
     </conf>
   </confs>

@@ -21,8 +21,8 @@ FC=gfortran
 AS=as
 
 # Macros
-CND_PLATFORM=MinGW_TDM-Windows
-CND_DLIB_EXT=dll
+CND_PLATFORM=GNU-Linux-x86
+CND_DLIB_EXT=so
 CND_CONF=_nix
 CND_DISTDIR=dist
 CND_BUILDDIR=build
@@ -35,18 +35,18 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/_ext/1021869461/Controller.o \
-	${OBJECTDIR}/_ext/1021869461/OctoFrame.o \
-	${OBJECTDIR}/_ext/1021869461/thread.o \
-	${OBJECTDIR}/main.o
+	${OBJECTDIR}/Controller.o \
+	${OBJECTDIR}/OctoFrame.o \
+	${OBJECTDIR}/main.o \
+	${OBJECTDIR}/thread.o
 
 
 # C Compiler Flags
 CFLAGS=
 
 # CC Compiler Flags
-CCFLAGS=`wx-config --cxxflags` 
-CXXFLAGS=`wx-config --cxxflags` 
+CCFLAGS=`/home/tesla/projects/libs/wxwidgets/bin/wx-config --cxxflags` 
+CXXFLAGS=`/home/tesla/projects/libs/wxwidgets/bin/wx-config --cxxflags` 
 
 # Fortran Compiler Flags
 FFLAGS=
@@ -55,35 +55,35 @@ FFLAGS=
 ASFLAGS=
 
 # Link Libraries and Options
-LDLIBSOPTIONS=-L/usr/include -L/usr/include/curl -L/usr/include/wx-2.8 -L/home/tesla/projects/octonine
+LDLIBSOPTIONS=-L/usr/include -L/home/tesla/projects/libs/curl/lib -L/home/tesla/projects/libs/wxwidgets/lib -L/home/tesla/projects/octonine -L../libs/wxwidgets/lib/wx/include/gtk2-ansi-release-2.8
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
-	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/octogag.exe
+	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/octogag
 
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/octogag.exe: ${OBJECTFILES}
+${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/octogag: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
-	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/octogag ${OBJECTFILES} ${LDLIBSOPTIONS} `wx-config --libs` -lcurl
+	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/octogag ${OBJECTFILES} ${LDLIBSOPTIONS} `/home/tesla/projects/libs/wxwidgets/bin/wx-config --libs` -lcurl
 
-${OBJECTDIR}/_ext/1021869461/Controller.o: /C/development/projects/octogag/Controller.cpp 
-	${MKDIR} -p ${OBJECTDIR}/_ext/1021869461
+${OBJECTDIR}/Controller.o: Controller.cpp 
+	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I/usr/include/curl -I/usr/include/rapidxml -I/usr/include/wx-2.8 -I/home/tesla/projects/octonine -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/1021869461/Controller.o /C/development/projects/octogag/Controller.cpp
+	$(COMPILE.cc) -g -I/home/tesla/projects/libs/curl/include -I/home/tesla/projects/libs/rapidxml -I/home/tesla/projects/libs/wxwidgets/include/wx-2.8 -I/home/tesla/projects/octonine -I../libs/wxwidgets/lib/wx/include/gtk2-ansi-release-2.8 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Controller.o Controller.cpp
 
-${OBJECTDIR}/_ext/1021869461/OctoFrame.o: /C/development/projects/octogag/OctoFrame.cpp 
-	${MKDIR} -p ${OBJECTDIR}/_ext/1021869461
+${OBJECTDIR}/OctoFrame.o: OctoFrame.cpp 
+	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I/usr/include/curl -I/usr/include/rapidxml -I/usr/include/wx-2.8 -I/home/tesla/projects/octonine -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/1021869461/OctoFrame.o /C/development/projects/octogag/OctoFrame.cpp
-
-${OBJECTDIR}/_ext/1021869461/thread.o: /C/development/projects/octogag/thread.cpp 
-	${MKDIR} -p ${OBJECTDIR}/_ext/1021869461
-	${RM} "$@.d"
-	$(COMPILE.cc) -g -I/usr/include/curl -I/usr/include/rapidxml -I/usr/include/wx-2.8 -I/home/tesla/projects/octonine -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/1021869461/thread.o /C/development/projects/octogag/thread.cpp
+	$(COMPILE.cc) -g -I/home/tesla/projects/libs/curl/include -I/home/tesla/projects/libs/rapidxml -I/home/tesla/projects/libs/wxwidgets/include/wx-2.8 -I/home/tesla/projects/octonine -I../libs/wxwidgets/lib/wx/include/gtk2-ansi-release-2.8 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/OctoFrame.o OctoFrame.cpp
 
 ${OBJECTDIR}/main.o: main.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -g -I/usr/include/curl -I/usr/include/rapidxml -I/usr/include/wx-2.8 -I/home/tesla/projects/octonine -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
+	$(COMPILE.cc) -g -I/home/tesla/projects/libs/curl/include -I/home/tesla/projects/libs/rapidxml -I/home/tesla/projects/libs/wxwidgets/include/wx-2.8 -I/home/tesla/projects/octonine -I../libs/wxwidgets/lib/wx/include/gtk2-ansi-release-2.8 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
+
+${OBJECTDIR}/thread.o: thread.cpp 
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -g -I/home/tesla/projects/libs/curl/include -I/home/tesla/projects/libs/rapidxml -I/home/tesla/projects/libs/wxwidgets/include/wx-2.8 -I/home/tesla/projects/octonine -I../libs/wxwidgets/lib/wx/include/gtk2-ansi-release-2.8 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/thread.o thread.cpp
 
 # Subprojects
 .build-subprojects:
@@ -91,7 +91,7 @@ ${OBJECTDIR}/main.o: main.cpp
 # Clean Targets
 .clean-conf: ${CLEAN_SUBPROJECTS}
 	${RM} -r ${CND_BUILDDIR}/${CND_CONF}
-	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/octogag.exe
+	${RM} ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/octogag
 
 # Subprojects
 .clean-subprojects:

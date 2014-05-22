@@ -1,7 +1,8 @@
+#include <wx/tbarbase.h>
+
 #include "OctoFrame.h"
 
-OctoFrame::OctoFrame(wxWindow* parent, wxWindowID id, const wxString& title, const wxPoint& pos, const wxSize& size, long style) : wxFrame(parent, id, title, pos, size, style)
-{
+OctoFrame::OctoFrame(wxWindow* parent, wxWindowID id, const wxString& title, const wxPoint& pos, const wxSize& size, long style) : wxFrame(parent, id, title, pos, size, style) {
 
     // required to manipulate multiple image formats
     wxInitAllImageHandlers();
@@ -73,7 +74,7 @@ OctoFrame::OctoFrame(wxWindow* parent, wxWindowID id, const wxString& title, con
     wxBoxSizer* bSizer11;
     bSizer11 = new wxBoxSizer(wxVERTICAL);
 
-    m_listBox1 = new wxListBox(PanelDefault, wxID_ANY, wxDefaultPosition, wxSize(300, -1), 0, NULL, wxLB_HSCROLL);
+    m_listBox1 = new wxListBox(PanelDefault, wxID_ANY, wxDefaultPosition, wxDefaultSize, 0, NULL, wxLB_HSCROLL);
     bSizer11->Add(m_listBox1, 1, wxEXPAND | wxRIGHT | wxLEFT, 5);
 
     BoxImage->Add(bSizer11, 1, wxEXPAND, 5);
@@ -154,8 +155,7 @@ OctoFrame::OctoFrame(wxWindow* parent, wxWindowID id, const wxString& title, con
     m_listBox1->Connect(wxEVT_COMMAND_LISTBOX_DOUBLECLICKED, wxCommandEventHandler(OctoFrame::showpost), NULL, this);
 }
 
-void OctoFrame::showpost(wxCommandEvent& event)
-{
+void OctoFrame::showpost(wxCommandEvent& event) {
 
     int selection = m_listBox1->GetSelection();
 
@@ -176,21 +176,23 @@ void OctoFrame::showpost(wxCommandEvent& event)
 
     wxBitmap gagimage = wxBitmap(image["location"], wxBITMAP_TYPE_ANY);
 
+    int w = gagimage.GetWidth();
+    int h = gagimage.GetHeight();
 
+    Image->SetBitmap(gagimage);
 
+    ImageScroll->SetScrollbars(1,1, w, h, 0, 0);
 
     event.Skip();
 }
 
-bool OctoFrame::firstload()
-{
+bool OctoFrame::firstload() {
 
     list = new Controller();
 
     OctoFrame::parsed = list->getVector();
 
-    for (int i = 0; i < OctoFrame::parsed.size(); i++)
-    {
+    for (int i = 0; i < OctoFrame::parsed.size(); i++) {
 
         std::string title = OctoFrame::parsed.at(i)["title"];
 
@@ -205,12 +207,10 @@ bool OctoFrame::firstload()
     return true;
 }
 
-void OctoFrame::LoadingStart()
-{
+void OctoFrame::LoadingStart() {
     m_gauge1->Pulse();
 }
 
-void OctoFrame::LoadingStop()
-{
+void OctoFrame::LoadingStop() {
     m_gauge1->SetValue(0);
 }
