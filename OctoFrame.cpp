@@ -76,14 +76,14 @@ OctoFrame::OctoFrame(wxWindow* parent, wxWindowID id, const wxString& title, con
     bSizer11 = new wxBoxSizer(wxVERTICAL);
 
     bSizer11->SetMinSize(wxSize(200, -1));
-    
+
     m_listBox1 = new wxListBox(PanelDefault, wxID_ANY, wxDefaultPosition, wxSize(150, -1), 0, NULL, wxLB_HSCROLL);
-    
+
     m_listBox1->SetMinSize(wxSize(150, -1));
 
     bSizer11->Add(m_listBox1, 1, wxEXPAND, 5);
 
-    BoxImage->Add(bSizer11, 1, wxEXPAND|wxLEFT, 5);
+    BoxImage->Add(bSizer11, 1, wxEXPAND | wxLEFT, 5);
 
     BoxMain->Add(BoxImage, 1, wxEXPAND | wxALL, 5);
 
@@ -185,10 +185,27 @@ void OctoFrame::showpost(wxCommandEvent& event)
 
     int w = gagimage.GetWidth();
     int h = gagimage.GetHeight();
+    int p = 450;
 
+    OctoImage * proportion = new OctoImage();
+    
+    std::vector<float> proportions = proportion->CalcProportions((double) w, (double) h, (double) p);
+
+    int nw = (int) proportions.at(0);
+    int nh = (int) proportions.at(1);
+    
+    std::cout << "[w]" << w << std::endl;
+    std::cout << "[h]" << h << std::endl;
+    std::cout << "[nw]" << nw << std::endl;
+    std::cout << "[nh]" << nh << std::endl;
+
+    Image->SetMinSize(wxSize(nw, nh));
+    Image->SetMaxSize(wxSize(nw, nh));    
     Image->SetBitmap(gagimage);
+    
 
-    ImageScroll->SetScrollbars(1, 1, w, h, 0, 0);
+    ImageScroll->SetScrollRate(1, 1);
+    ImageScroll->SetVirtualSize(nw, nh);
 
     event.Skip();
 }

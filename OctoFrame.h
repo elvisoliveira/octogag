@@ -32,6 +32,8 @@
 #include <wx/log.h>
 
 #include "Controller.h"
+#include "OctoImage.h"
+
 class OctoFrame : public wxFrame
 {
 private:

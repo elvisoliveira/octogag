@@ -35,6 +35,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
+	${OBJECTDIR}/_ext/1021869461/OctoImage.o \
 	${OBJECTDIR}/Controller.o \
 	${OBJECTDIR}/OctoFrame.o \
 	${OBJECTDIR}/main.o \
@@ -64,6 +65,11 @@ LDLIBSOPTIONS=-L/C/development/wxWidgets-2.9.5/lib/gcc_lib -L/C/development/proj
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/octogag.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/octogag ${OBJECTFILES} ${LDLIBSOPTIONS} -mthreads -lwxmsw29u -lwxtiff -lwxjpeg -lwxpng -lwxzlib -lwxregexu -lwxexpat -lkernel32 -luser32 -lwxregexu -lgdi32 -lcomdlg32 -lwinspool -lwinmm -lshell32 -lcomctl32 -lole32 -loleaut32 -luuid -lrpcrt4 -ladvapi32 -lwsock32
+
+${OBJECTDIR}/_ext/1021869461/OctoImage.o: /C/development/projects/octogag/OctoImage.cpp 
+	${MKDIR} -p ${OBJECTDIR}/_ext/1021869461
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -I/C/development/wxWidgets-2.9.5/lib/gcc_lib/mswu -I/C/development/curl-7.36.0/include -I/C/development/projects/octonine -I/C/development/rapidxml -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/1021869461/OctoImage.o /C/development/projects/octogag/OctoImage.cpp
 
 ${OBJECTDIR}/Controller.o: Controller.cpp 
 	${MKDIR} -p ${OBJECTDIR}
