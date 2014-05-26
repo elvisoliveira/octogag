@@ -57,13 +57,14 @@ protected:
     wxMenu * MenuFile;
     wxMenu * Help;
     void recarregar(wxCommandEvent& event);
-    void showpost(wxCommandEvent& event);
+    void showpost( wxListEvent& event );
 public:
     OctoFrame(wxWindow * parent, wxWindowID id = wxID_ANY, const wxString& title = wxT("OctoGAG"), const wxPoint& pos = wxDefaultPosition, const wxSize& size = wxSize(800, 450), long style = wxCAPTION | wxCLOSE_BOX | wxMINIMIZE_BOX | wxSYSTEM_MENU | wxTAB_TRAVERSAL);
     std::vector <std::map<std::string, std::string> > parsed;
     bool firstload();
     void LoadingStart();
     void LoadingStop();
+    
 };
 
 #endif	/* OCTOFRAME_H  */

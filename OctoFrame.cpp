@@ -172,13 +172,19 @@ OctoFrame::OctoFrame(wxWindow* parent, wxWindowID id, const wxString& title, con
     this->Centre(wxBOTH);
 
     // Connect Events
-    listpost->Connect(wxEVT_COMMAND_LISTBOX_DOUBLECLICKED, wxCommandEventHandler(OctoFrame::showpost), NULL, this);
+
+    listpost->Connect(wxEVT_LIST_ITEM_ACTIVATED, wxListEventHandler(OctoFrame::showpost), NULL, this);
+
+
+
+
 }
 
-void OctoFrame::showpost(wxCommandEvent& event)
+void OctoFrame::showpost(wxListEvent& event)
 {
 
-    int selection = m_listBox1->GetSelection();
+    int selection = event.GetIndex();
+
 
     std::string url = OctoFrame::parsed.at(selection)["content"];
 
