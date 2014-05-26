@@ -36,6 +36,7 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 # Object Files
 OBJECTFILES= \
 	${OBJECTDIR}/_ext/1021869461/OctoImage.o \
+	${OBJECTDIR}/_ext/1021869461/Utils.o \
 	${OBJECTDIR}/Controller.o \
 	${OBJECTDIR}/OctoFrame.o \
 	${OBJECTDIR}/main.o \
@@ -70,6 +71,11 @@ ${OBJECTDIR}/_ext/1021869461/OctoImage.o: /C/development/projects/octogag/OctoIm
 	${MKDIR} -p ${OBJECTDIR}/_ext/1021869461
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -I/C/development/wxWidgets-2.9.5/lib/gcc_lib/mswu -I/C/development/curl-7.36.0/include -I/C/development/projects/octonine -I/C/development/rapidxml -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/1021869461/OctoImage.o /C/development/projects/octogag/OctoImage.cpp
+
+${OBJECTDIR}/_ext/1021869461/Utils.o: /C/development/projects/octogag/Utils.cpp 
+	${MKDIR} -p ${OBJECTDIR}/_ext/1021869461
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -I/C/development/wxWidgets-2.9.5/lib/gcc_lib/mswu -I/C/development/curl-7.36.0/include -I/C/development/projects/octonine -I/C/development/rapidxml -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/1021869461/Utils.o /C/development/projects/octogag/Utils.cpp
 
 ${OBJECTDIR}/Controller.o: Controller.cpp 
 	${MKDIR} -p ${OBJECTDIR}

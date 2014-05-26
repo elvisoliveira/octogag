@@ -30,6 +30,7 @@
 #include <wx/menu.h>
 #include <wx/frame.h>
 #include <wx/log.h>
+#include <wx/listctrl.h>
 
 #include "Controller.h"
 #include "OctoImage.h"
@@ -44,6 +45,8 @@ protected:
     wxStaticLine * line_menu;
     wxScrolledWindow * ImageScroll;
     wxStaticBitmap * Image;
+    wxListCtrl * listpost;
+    wxStaticBitmap * ImageTransform;
     wxBoxSizer * BoxImageScroll;
     wxListBox * m_listBox1;
     wxStaticLine * Divisor;

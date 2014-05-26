@@ -1,6 +1,7 @@
 #include <wx/tbarbase.h>
 
 #include "OctoFrame.h"
+#include "Utils.h"
 
 OctoFrame::OctoFrame(wxWindow* parent, wxWindowID id, const wxString& title, const wxPoint& pos, const wxSize& size, long style) : wxFrame(parent, id, title, pos, size, style)
 {
@@ -77,11 +78,24 @@ OctoFrame::OctoFrame(wxWindow* parent, wxWindowID id, const wxString& title, con
 
     bSizer11->SetMinSize(wxSize(200, -1));
 
-    m_listBox1 = new wxListBox(PanelDefault, wxID_ANY, wxDefaultPosition, wxSize(150, -1), 0, NULL, wxLB_HSCROLL);
+    /* Panel for listing articles - already working */
 
-    m_listBox1->SetMinSize(wxSize(150, -1));
+    //    m_listBox1 = new wxListBox(PanelDefault, wxID_ANY, wxDefaultPosition, wxSize(150, -1), 0, NULL, wxLB_HSCROLL);
 
-    bSizer11->Add(m_listBox1, 1, wxEXPAND, 5);
+    //    m_listBox1->SetMinSize(wxSize(150, -1));
+
+    //    bSizer11->Add(m_listBox1, 1, wxEXPAND, 5);
+
+    /* new panel for grid articles */
+
+    listpost = new wxListCtrl(PanelDefault, wxID_ANY, wxDefaultPosition, wxDefaultSize, wxLC_HRULES | wxLC_REPORT | wxLC_VRULES);
+
+    listpost->InsertColumn(0, _("Type"));
+    listpost->InsertColumn(1, _("Title"));
+
+    bSizer11->Add(listpost, 1, wxEXPAND, 5);
+
+    /* end of the panel for listing articles */
 
     BoxImage->Add(bSizer11, 1, wxEXPAND | wxLEFT, 5);
 
@@ -158,7 +172,7 @@ OctoFrame::OctoFrame(wxWindow* parent, wxWindowID id, const wxString& title, con
     this->Centre(wxBOTH);
 
     // Connect Events
-    m_listBox1->Connect(wxEVT_COMMAND_LISTBOX_DOUBLECLICKED, wxCommandEventHandler(OctoFrame::showpost), NULL, this);
+    listpost->Connect(wxEVT_COMMAND_LISTBOX_DOUBLECLICKED, wxCommandEventHandler(OctoFrame::showpost), NULL, this);
 }
 
 void OctoFrame::showpost(wxCommandEvent& event)
@@ -185,24 +199,25 @@ void OctoFrame::showpost(wxCommandEvent& event)
 
     int w = gagimage.GetWidth();
     int h = gagimage.GetHeight();
-    int p = 450;
+    int p = 483;
 
     OctoImage * proportion = new OctoImage();
-    
+
     std::vector<float> proportions = proportion->CalcProportions((double) w, (double) h, (double) p);
 
     int nw = (int) proportions.at(0);
     int nh = (int) proportions.at(1);
-    
+
     std::cout << "[w]" << w << std::endl;
     std::cout << "[h]" << h << std::endl;
     std::cout << "[nw]" << nw << std::endl;
     std::cout << "[nh]" << nh << std::endl;
 
-    Image->SetMinSize(wxSize(nw, nh));
-    Image->SetMaxSize(wxSize(nw, nh));    
-    Image->SetBitmap(gagimage);
-    
+    wxImage imgtransform = gagimage.ConvertToImage();
+
+    wxBitmap resized = wxBitmap(imgtransform.Scale(nw, nh, wxIMAGE_QUALITY_HIGH));
+
+    Image->SetBitmap(resized);
 
     ImageScroll->SetScrollRate(1, 1);
     ImageScroll->SetVirtualSize(nw, nh);
@@ -222,11 +237,28 @@ bool OctoFrame::firstload()
 
         std::string title = OctoFrame::parsed.at(i)["title"];
 
-        wxString wxTitle(title.c_str(), wxConvUTF8);
+        std::string content = OctoFrame::parsed.at(i)["content"];
 
-        m_listBox1->Append(wxTitle);
+        std::string urlsplitter = ".";
+
+        Utils * utils = new Utils();
+
+        std::vector<std::string> urlelements = utils->explode(content, urlsplitter);
+
+        std::string extension = urlelements.back();
+
+        // wxString wxTitle(title.c_str(), wxConvUTF8);
+
+        long index = listpost->InsertItem(0, extension.c_str());
+
+        listpost->SetItem(index, 1, title.c_str());
+
+        // m_listBox1->Append(wxTitle);
 
     }
+
+    listpost->SetColumnWidth(0, wxLIST_AUTOSIZE);
+    listpost->SetColumnWidth(1, wxLIST_AUTOSIZE);
 
     return true;
 }
