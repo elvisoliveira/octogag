@@ -57,7 +57,7 @@ FFLAGS=
 ASFLAGS=
 
 # Link Libraries and Options
-LDLIBSOPTIONS=-L/C/development/wxWidgets-2.9.5/lib/gcc_lib -L/C/development/projects/octonine -L/C/development/curl-7.36.0/lib -lcurl -lcurl -lcurldll
+LDLIBSOPTIONS=-L/C/development/wxWidgets-2.9.5/lib/gcc_lib -L/C/development/projects/octonine -L/C/development/curl-7.36.0/lib -L/C/development/giflib/lib -lcurl -lcurl -lcurldll -lgif -lgif.dll
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
@@ -70,32 +70,32 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/octogag.exe: ${OBJECTFILES}
 ${OBJECTDIR}/_ext/1021869461/OctoImage.o: /C/development/projects/octogag/OctoImage.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/1021869461
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -I/C/development/wxWidgets-2.9.5/lib/gcc_lib/mswu -I/C/development/curl-7.36.0/include -I/C/development/projects/octonine -I/C/development/rapidxml -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/1021869461/OctoImage.o /C/development/projects/octogag/OctoImage.cpp
+	$(COMPILE.cc) -O2 -I/C/development/wxWidgets-2.9.5/lib/gcc_lib/mswu -I/C/development/curl-7.36.0/include -I/C/development/projects/octonine -I/C/development/rapidxml -I/C/development/giflib/include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/1021869461/OctoImage.o /C/development/projects/octogag/OctoImage.cpp
 
 ${OBJECTDIR}/_ext/1021869461/Utils.o: /C/development/projects/octogag/Utils.cpp 
 	${MKDIR} -p ${OBJECTDIR}/_ext/1021869461
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -I/C/development/wxWidgets-2.9.5/lib/gcc_lib/mswu -I/C/development/curl-7.36.0/include -I/C/development/projects/octonine -I/C/development/rapidxml -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/1021869461/Utils.o /C/development/projects/octogag/Utils.cpp
+	$(COMPILE.cc) -O2 -I/C/development/wxWidgets-2.9.5/lib/gcc_lib/mswu -I/C/development/curl-7.36.0/include -I/C/development/projects/octonine -I/C/development/rapidxml -I/C/development/giflib/include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/_ext/1021869461/Utils.o /C/development/projects/octogag/Utils.cpp
 
 ${OBJECTDIR}/Controller.o: Controller.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -I/C/development/wxWidgets-2.9.5/lib/gcc_lib/mswu -I/C/development/curl-7.36.0/include -I/C/development/projects/octonine -I/C/development/rapidxml -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Controller.o Controller.cpp
+	$(COMPILE.cc) -O2 -I/C/development/wxWidgets-2.9.5/lib/gcc_lib/mswu -I/C/development/curl-7.36.0/include -I/C/development/projects/octonine -I/C/development/rapidxml -I/C/development/giflib/include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Controller.o Controller.cpp
 
 ${OBJECTDIR}/OctoFrame.o: OctoFrame.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -I/C/development/wxWidgets-2.9.5/lib/gcc_lib/mswu -I/C/development/curl-7.36.0/include -I/C/development/projects/octonine -I/C/development/rapidxml -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/OctoFrame.o OctoFrame.cpp
+	$(COMPILE.cc) -O2 -I/C/development/wxWidgets-2.9.5/lib/gcc_lib/mswu -I/C/development/curl-7.36.0/include -I/C/development/projects/octonine -I/C/development/rapidxml -I/C/development/giflib/include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/OctoFrame.o OctoFrame.cpp
 
 ${OBJECTDIR}/main.o: main.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -I/C/development/wxWidgets-2.9.5/lib/gcc_lib/mswu -I/C/development/curl-7.36.0/include -I/C/development/projects/octonine -I/C/development/rapidxml -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
+	$(COMPILE.cc) -O2 -I/C/development/wxWidgets-2.9.5/lib/gcc_lib/mswu -I/C/development/curl-7.36.0/include -I/C/development/projects/octonine -I/C/development/rapidxml -I/C/development/giflib/include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.cpp
 
 ${OBJECTDIR}/thread.o: thread.cpp 
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -I/C/development/wxWidgets-2.9.5/lib/gcc_lib/mswu -I/C/development/curl-7.36.0/include -I/C/development/projects/octonine -I/C/development/rapidxml -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/thread.o thread.cpp
+	$(COMPILE.cc) -O2 -I/C/development/wxWidgets-2.9.5/lib/gcc_lib/mswu -I/C/development/curl-7.36.0/include -I/C/development/projects/octonine -I/C/development/rapidxml -I/C/development/giflib/include -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/thread.o thread.cpp
 
 # Subprojects
 .build-subprojects:

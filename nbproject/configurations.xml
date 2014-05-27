@@ -60,6 +60,7 @@
             <pElem>C:/development/curl-7.36.0/include</pElem>
             <pElem>C:/development/projects/octonine</pElem>
             <pElem>C:/development/rapidxml</pElem>
+            <pElem>C:/development/giflib/include</pElem>
           </incDir>
           <commandLine>`wx-config --cxxflags`</commandLine>
         </ccTool>
@@ -75,11 +76,14 @@
             <pElem>C:/development/wxWidgets-2.9.5/lib/gcc_lib</pElem>
             <pElem>C:/development/projects/octonine</pElem>
             <pElem>C:/development/curl-7.36.0/lib</pElem>
+            <pElem>C:/development/giflib/lib</pElem>
           </linkerAddLib>
           <linkerLibItems>
             <linkerLibLibItem>curl</linkerLibLibItem>
             <linkerLibLibItem>curl</linkerLibLibItem>
             <linkerLibLibItem>curldll</linkerLibLibItem>
+            <linkerLibLibItem>gif</linkerLibLibItem>
+            <linkerLibLibItem>gif.dll</linkerLibLibItem>
           </linkerLibItems>
           <commandLine>-mthreads -lwxmsw29u -lwxtiff -lwxjpeg -lwxpng -lwxzlib -lwxregexu -lwxexpat -lkernel32 -luser32 -lwxregexu -lgdi32 -lcomdlg32 -lwinspool -lwinmm -lshell32 -lcomctl32 -lole32 -loleaut32 -luuid -lrpcrt4 -ladvapi32 -lwsock32</commandLine>
         </linkerTool>
