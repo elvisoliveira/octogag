@@ -1,6 +1,6 @@
 ## OctoGAG
 
-Playing with wxWidgets on Windows and Linux.
+9GAG reader App. Playing with wxWidgets on Windows and Linux, just for fun.
 
 ![alt tag](http://i.imgur.com/KlzWsum.png)
 
